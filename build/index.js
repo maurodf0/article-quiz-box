@@ -96,14 +96,10 @@ wp.blocks.registerBlockType('quiz-plugin/article-quiz-block', {
   category: "common",
   attributes: {
     skyColor: {
-      type: "string",
-      source: "text",
-      selector: ".skyColor"
+      type: "string"
     },
     grassColor: {
-      type: "string",
-      source: "text",
-      selector: ".grassColor"
+      type: "string"
     }
   },
   edit: function (props) {
@@ -130,11 +126,8 @@ wp.blocks.registerBlockType('quiz-plugin/article-quiz-block', {
     }));
   },
   save: props => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Today the sky is ", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-      className: "skycolor"
-    }, props.attributes.skyColor), " and the grass is ", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-      className: "grassColor"
-    }, props.attributes.grassColor)));
+    //in the save function you cna display and save the info, but returning null you can use Php for display the data via DB
+    return null;
   }
 });
 }();

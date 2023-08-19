@@ -5,13 +5,9 @@ wp.blocks.registerBlockType('quiz-plugin/article-quiz-block', {
     attributes: {
         skyColor: {
             type: "string",
-            source: "text",
-            selector: ".skyColor"
         },
         grassColor: {
             type: "string",
-            source: "text",
-            selector: ".grassColor"
         }
     },
     edit: function (props) {
@@ -30,12 +26,7 @@ wp.blocks.registerBlockType('quiz-plugin/article-quiz-block', {
        )
     },
     save: (props) => {
-      return (
-        <div>
-            <p>Today the sky is <span className="skycolor">{props.attributes.skyColor}</span> and the grass is <span className="grassColor">{props.attributes.grassColor}</span></p>
-        </div>
-        
-      )
-
+        //in the save function you cna display and save the info, but returning null you can use Php for display the data via DB
+      return null
     }
 });
